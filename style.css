@@ -1,0 +1,24 @@
+#content {
+  margin-bottom: 0;
+  height: 80vh;
+}
+
+form {
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 20%;
+  font-size: 20px;
+  width: 400px;
+}
+
+#result {
+  color:rgb(0, 0, 0);
+  position: relative;
+  top:20px;
+  text-align: center;
+}
+
+#mark {
+  background-color: yellow;
+  color: black;
+}
