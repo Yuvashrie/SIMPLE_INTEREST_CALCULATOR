@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Web App – Simple Interest Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-app="myapp" ng-controller='control'>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1> SIMPLE INTEREST CALCULATOR</h1>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+     <form>
+       <div class="form-group">
+         <label>Principal Amount(in rupees)</label>
+         <input type="number" required class="form-control" ng-model="input.principal" id="principal">
+       </div>
+       <div class="form-group">
+         <label>Rate of Interest(in %):</label>
+        <div id="selectValue"></div>
+           <input type="range" required min="20" max="100" value="50" class="form-control" ng-model="input.rate">
+           <p>{{input.rate}}%</p>
+       </div>
+       <div class="form-group">
+         <label>Time(in years):</label>
+          <select class="form-control" ng-model="input.time">
+            <script language="javascript" type="text/javascript">
+              for (var d = 1; d <= 100; d++) {
+                document.write("<option>" + d + "</option>");
+              }
+            </script>
+          </select>
+       </div>
+       <div class="form-group">
+         <button type="submit" class="btn btn-success" ng-click="calculate()">Compute Interest</button>
+       </div>
+     </form>
+     <h3 id="result"></h3>
+</div>
+<h3>Ⓒ Everyone Can Get Rich</h3>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
